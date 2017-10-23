@@ -81,9 +81,9 @@ Python 爬虫资源包整理
 
 *   字符编码
     *   [uniout](https://github.com/moskytw/uniout)&#8211; 打印可读字符，而不是被转义的字符串。
-    *   (https://github.com/chardet/chardet)[chardet] &#8211; 兼容 Python的2/3的字符编码器。
-    *   (https://github.com/lxneng/xpinyin)[xpinyin] &#8211; 一个将中国汉字转为拼音的库。
-    *   (https://github.com/vinta/pangu.py)[pangu.py] &#8211; 格式化文本中CJK和字母数字的间距.
+    *   [chardet](https://github.com/chardet/chardet) &#8211; 兼容 Python的2/3的字符编码器。
+    *   [xpinyin](https://github.com/lxneng/xpinyin) &#8211; 一个将中国汉字转为拼音的库。
+    *   [pangu.py](https://github.com/vinta/pangu.py) &#8211; 格式化文本中CJK和字母数字的间距.
 
 *   Slug化
     *   [awesome-slugify](https://github.com/dimka665/awesome-slugify)&#8211; 一个可以保留unicode的Python slugify库。
