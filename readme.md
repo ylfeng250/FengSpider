@@ -71,50 +71,76 @@ Python 爬虫资源包整理
 用于解析和操作简单文本的库。
 
 *   通用
-
+     *   [difflib](https://docs.python.org/2/library/difflib.html)  &#8211; （Python标准库）帮助进行差异化比较。
+     *   [Levenshtein](https://github.com/ztane/python-Levenshtein) &#8211; 快速计算Levenshtein距离和字符串相似度。
+     *   [esmre](https://code.google.com/p/esmre/)  &#8211; 正则表达式加速器。
+     *   [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) &#8211; 模糊字符串匹配。
+     *   [ftfy](https://github.com/LuminosoInsight/python-ftfy) &#8211; 自动整理Unicode文本，减少碎片化。
 *   转换
+     *   [unidecode](https://pypi.python.org/pypi/Unidecode) &#8211; 将Unicode文本转为ASCII。
 
 *   字符编码
+    *   [uniout](https://github.com/moskytw/uniout)&#8211; 打印可读字符，而不是被转义的字符串。
+    *   (https://github.com/chardet/chardet)[chardet] &#8211; 兼容 Python的2/3的字符编码器。
+    *   (https://github.com/lxneng/xpinyin)[xpinyin] &#8211; 一个将中国汉字转为拼音的库。
+    *   (https://github.com/vinta/pangu.py)[pangu.py] &#8211; 格式化文本中CJK和字母数字的间距.
 
 *   Slug化
-
+    *   [awesome-slugify](https://github.com/dimka665/awesome-slugify)&#8211; 一个可以保留unicode的Python slugify库。
+    *   [python-slugify](https://github.com/un33k/python-slugify)&#8211; 一个可以将Unicode转为ASCII的Python slugify库。
+    *   [unicode-slugify](https://github.com/mozilla/unicode-slugify) &#8211; 一个可以将生成Unicode slugs的工具。
+    *   [pytils](https://github.com/j2a/pytils)&#8211; 处理俄语字符串的简单工具（包括pytils.translit.slugify）。
 *   通用解析器
-
+    *   [PLY](http://www.dabeaz.com/ply/)&#8211; lex和yacc解析工具的Python实现。
+    *   [pyparsing](http://pyparsing.wikispaces.com/")&#8211; 一个通用框架的生成语法分析器。
 *   人的名字
-
+    *   [python-nameparser](https://github.com/derek73/python-nameparser)-解析人的名字的组件。
 *   电话号码
-
+    *   [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers)-解析，格式化，存储和验证国际电话号码。
 *   用户代理字符串
-
+    *   [python-user-agents](https://github.com/selwin/python-user-agents)&#8211; 浏览器用户代理的解析器。
+    *   [HTTP Agent Parser](https://github.com/shon/httpagentparser)&#8211; Python的HTTP代理分析器。
 ## 特定格式文件处理
 
 解析和处理特定文本格式的库。
 
 *   通用
-
+    *   [tablib](https://github.com/kennethreitz/tablib) &#8211; 一个把数据导出为XLS、CSV、JSON、YAML等格式的模块。
+    *   [textract](https://github.com/deanmalmgren/textract) &#8211; 从各种文件中提取文本，比如 Word、PowerPoint、PDF等。
+    *   [messytables](https://github.com/okfn/messytables) &#8211; 解析混乱的表格数据的工具。
+    *   [rows](https://github.com/turicas/rows) &#8211; 一个常用数据接口，支持的格式很多（目前支持CSV，HTML，XLS，TXT – 将来还会提供更多！）。
 *   Office
-
+    *   [python-docx](https://github.com/python-openxml/python-docx) &#8211; 读取，查询和修改的Microsoft Word2007/2008的docx文件。
+    *   [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) &#8211; 从Excel文件读取写入数据和格式信息。
+    *   [XlsxWriter](https://xlsxwriter.readthedocs.org/) &#8211; 一个创建Excel.xlsx文件的Python模块。
+    *   [xlwings](http://xlwings.org/) &#8211; 一个BSD许可的库，可以很容易地在Excel中调用Python，反之亦然。
+    *   [openpyxl](https://openpyxl.readthedocs.org/en/latest/) &#8211; 一个用于读取和写入的Excel2010 XLSX/ XLSM/ xltx/ XLTM文件的库。
+    *   [Marmir](https://github.com/brianray/mm) &#8211; 提取Python数据结构并将其转换为电子表格。
 *   PDF
-
+    *   [PDFMiner](https://github.com/euske/pdfminer) &#8211; 一个从PDF文档中提取信息的工具。
+    *   [PyPDF2](https://github.com/mstamy2/PyPDF2) &#8211; 一个能够分割、合并和转换PDF页面的库。
+    *   [ReportLab](http://www.reportlab.com/opensource/) &#8211; 允许快速创建丰富的PDF文档。
+    *   [pdftables](https://pypi.python.org/pypi/pdftables) &#8211; 直接从PDF文件中提取表格。
 *   Markdown
-
+    *   [Python-Markdown](https://github.com/waylan/Python-Markdown) &#8211; 一个用Python实现的John Gruber的Markdown。
+    *   [Mistune](https://github.com/lepture/mistune) &#8211; 速度最快，功能全面的Markdown纯Python解析器。
+    *   [markdown2](https://pypi.python.org/pypi/markdown2) &#8211; 一个完全用Python实现的快速的Markdown。
 *   YAML
-
+    *   [PyYAML](http://pyyaml.org/) &#8211; 一个Python的YAML解析器。
 *   CSS
-
+    *   [cssutils](https://pypi.python.org/pypi/cssutils/) &#8211; 一个Python的CSS库。
 *   ATOM/RSS
-
+    *   [feedparser](http://pythonhosted.org/feedparser/) &#8211; 通用的feed解析器。
 *   SQL
-
+    *   [sqlparse](https://sqlparse.readthedocs.org/) &#8211; 一个非验证的SQL语句分析器。
 *   HTTP
-*   HTTP
-
+    *   [http-parser](https://github.com/benoitc/http-parser) &#8211; C语言实现的HTTP请求/响应消息解析器。
 *   微格式
-
+    *   [opengraph](https://github.com/erikriver/opengraph) &#8211; 一个用来解析Open Graph协议标签的Python模块。
 *   可移植的执行体
-
+    *   [pefile](https://github.com/erocarrera/pefile) &#8211; 一个多平台的用于解析和处理可移植执行体（即PE）文件的模块。
 *   PSD
-
+    *   [psd-tools](https://github.com/kmike/psd-tools) &#8211; 将Adobe Photoshop PSD（即PE）文件读取到Python数据结构。
 ## 自然语言处理
 
 处理人类语言问题的库。
