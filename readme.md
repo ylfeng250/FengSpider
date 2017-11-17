@@ -3,13 +3,15 @@
 ---
 自己的一些爬虫经验总结
 
+0.[正则表达式](正则表达式.md)
+
 1.[AJAX的处理方式](./1.Ajax的处理方式)
 
 2.[新闻页面的抓取](./2.新闻页面的抓取)
 
 * [新浪军事](./2.新闻页面的抓取/1.新浪军事)
 
-3.[request库的学习和使用](./3.request库的学习和使用)
+3.[requests库的学习和使用](./3.requests库的学习和使用)
 
 ---
 Python 爬虫资源包整理
@@ -19,6 +21,7 @@ Python 爬虫资源包整理
 
     *   [urllib](https://docs.python.org/3.4/library/urllib.html?highlight=urllib#module-urllib) -网络库(stdlib)。
     *   [requests](https://github.com/kennethreitz/requests) -网络库。
+   * [requests中文文档](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html) 
     *   [grab](https://github.com/lorien/grab) &#8211; 网络库（基于pycurl）。
     *   [pycurl](https://github.com/pycurl/pycurl) &#8211; 网络库（绑定[libcurl](http://curl.haxx.se/libcurl/)）。
     *   [urllib3](https://github.com/shazow/urllib3) &#8211; Python HTTP库，安全连接池、支持文件post、可用性高。
