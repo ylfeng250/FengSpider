@@ -8,6 +8,7 @@ url_github = "https://github.com/timeline.json"
 url_headers = 'http://httpbin.org/headers'
 url_post = 'http://httpbin.org/post'
 url_cookie = 'http://httpbin.org/cookies'
+url_wiki = 'http://en.wikipedia.org/wiki/Monty_Python'
 # 发送普通的get请求 
 def test1():
     res = requests.get(url_ip)
@@ -99,6 +100,51 @@ def test10():
         res = requests.get('http://github.com', timeout=0.001)
     except:
         print('超时')
+
+"""
+回话对象
+会话对象让你能够跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie
+所以如果你向同一主机发送多个请求，底层的 TCP 连接将会被重用，从而带来显著的性能提升
+"""
+
+# 跨请求来保持一些cookie
+def test11():
+    s = requests.Session()
+    s.get('http://httpbin.org/cookies/set/sessioncookie/123456789')
+    r = s.get('http://httpbin.org/cookies')
+    print(r.text)
+
+def test12():
+    s = requests.Session()
+    s.auth = ('user','pass')
+    s.headers.update({'x-test':'true'})
+    # x-test 和 x-test2都会被发送
+    # 上面设置的头部信息会和下面方法中传入的头部信息合并
+    r = s.get(url=url_headers,headers={'x-test2':'true'})
+    print(r.text)
+    r = s.get(url_headers)
+    print(r.text)
+    # 在headers.update中设置的x-test会被保留，但是在get方法中设置的x-test2不会
+
+# 在方法级别设置的参数不会被夸请求保持
+def test13():
+    s = requests.Session()
+    res = s.get(url_cookie,cookies={'from-my':'oh-my-god'})
+    print(res.text)
+    res = s.get(url_cookie)
+    print(res.text)
+    # 第二次访问的时候第一次设置的cookie不会被保存
+
+"""
+请求request与响应response对象
+这一部分需要之后仔细看看
+"""
+def test14():
+    res = requests.get(url_wiki)
+    print('>>>>获取响应头部')
+    print(res.headers)
+    print('>>>>获取发送的请求头部')
+    print(res.request.headers)
 if __name__ == "__main__":
     # test1()
     # test2()
@@ -108,4 +154,8 @@ if __name__ == "__main__":
     # test6()
     # test7()
     # test8()
-    test10()
+    # test10()
+    # test11()
+    # test12()
+    # test13()
+    test14()
