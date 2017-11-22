@@ -1,7 +1,4 @@
-"""
-抓取豆瓣电影 蜘蛛侠：英雄归来 的短评
-pc版
-"""
+
 import random
 import requests
 import json
