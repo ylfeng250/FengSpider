@@ -1,3 +1,11 @@
+"""
+获取优酷视频播放的真正链接
+
+使用方法:
+更换 URL为视频的URL
+在终端输入
+python 优酷视频播放链接获取.py
+"""
 import random
 import re
 
