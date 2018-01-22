@@ -3,10 +3,6 @@
 ---
 自己的一些爬虫经验总结
 
-[爬虫学习资源总和](学习目录.md)
-
-0.[正则表达式](正则表达式.md) —— [pc端的user_agent](pc_user_agent.txt) —— [移动端的user_agent](mobile_user_agent.txt)
-
 ## [学习](./学习)
 
  * [Ajax的处理方式](./学习/1.Ajax的处理方式)
