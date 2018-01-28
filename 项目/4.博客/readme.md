@@ -13,6 +13,10 @@
 
 * jianshu.py 简书博客爬虫
 
+* juejin.py 掘金文章爬虫
+
+* segmentfault.py segmentfault文章爬虫
+
 ## 使用方法举例
 
 ```
