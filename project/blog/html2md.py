@@ -96,18 +96,33 @@ def segmentfault(url):
     
 
 def juejin(url):
-    headers = {
-        'Host': 'juejin.im',
-        'Referer': 'https://juejin.im/',
-        'User-Agent': random.choice(useragents)
+    ## 首先获取文章的id
+    postId = url.split('/')[-1]
+    ## 目标url
+    tar_url = "https://post-storage-api-ms.juejin.im/v1/getDetailData"
+    ## 用来获取标题
+    data1 = {
+        "src":"web",
+        "type":"entry",
+        "postId":postId
     }
-    res = requests.get(url=url,headers=headers).text # 获取整个html
-    soup = BeautifulSoup(res,'html5lib')
-    title = soup.find('title').text
-    article = str(soup.find(class_='post-content-container'))
+    ## 用来获取文章主体
+    data2 = {
+        "src":"web",
+        "type":"entryView",
+        "postId":postId
+    }
+    res = requests.get(url=tar_url,params=data1)
+    res.encoding = "utf-8"
+    res = res.json()
+    title = res["d"]["title"]
+    res = requests.get(url=tar_url,params=data2)
+    res.encoding = "utf-8"
+    res = res.json()
+    article = res["d"]["transcodeContent"]
     ## 写入文件
     pwd = os.getcwd() # 获取当前的文件路径
-    dirpath = pwd + '/segmentfault/'
+    dirpath = pwd + '/juejin/'
     write2md(dirpath,title,article)
  
 def doelse(url):
@@ -182,6 +197,8 @@ def checkSite(url):
         zhihu(url)
     elif url.find('segmentfault') != -1:
         segmentfault(url)
+    elif url.find('juejin') != -1:
+        juejin(url)
     else:
         doelse(url)
     
