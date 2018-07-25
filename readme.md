@@ -21,3 +21,4 @@
 * [拉钩网数据抓取](./project/lagou)
 * [博客爬虫](./project/blog)
 * [优酷视频链接](./project/youku)
+* [华师大讲座报告爬虫](./project/华师大讲座会议)
