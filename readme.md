@@ -18,6 +18,7 @@
 ## [项目](./project)
 * [新浪军事](./project/sina)
 * [豆瓣影评抓取](./project/douban)
+* [豆瓣-猎毒人短评-词云](./project/douban&wordcloud)
 * [拉钩网数据抓取](./project/lagou)
 * [博客爬虫](./project/blog)
 * [优酷视频链接](./project/youku)
