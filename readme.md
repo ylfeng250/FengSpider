@@ -8,6 +8,8 @@
  * [Ajax的处理方式](./learn/1.Ajax的处理方式)
  * [requests库的学习和使用](./learn/2.requests库的学习和使用)
  * [网络信息采集](./learn/3.网络信息采集)
+ * [Selenuim](./learn/4.Selenuim)
+ * [Scrapy框架学习使用](./learn/5.Scrapy框架学习)
 
 ## [资源]
 * [爬虫学习资源总和](学习目录.md)
