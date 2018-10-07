@@ -75,8 +75,40 @@ class FengProxy():
                     self.get(url=url,params=params,headers=headers,proxies=proxy,timeout=timeout,checkCount=checkCount-1)
 
 
-    def post(self):
-        pass
+    def post(self,url,data=None,headers=None,proxies=None,timeout=20,checkCount=5):
+        """
+        url 请求的地址
+        data 请求的方式 kv
+        proxies 代理
+        timeout 超时时间
+        尝试次数 默认 5次
+        """
+        print("开始请求",url)
+        if headers == None:
+            headers={'User-Agent':self.ua.random}
+        if proxies == None:
+            ## 在没有代理的情况下
+            try:
+                self.content = requests.get(url=url,headers=headers,data=data,timeout=timeout).text
+            except:
+                if checkCount > 0:
+                    time.sleep(5) ## 睡眠5秒
+                    return self.post(url=url,data=data,headers=headers,timeout=timeout,checkCount=checkCount-1)
+                else:
+                    ## 尝试超过5次之后开始添加代理
+                    time.sleep(5)
+                    proxy = {"http":random.choice(self.proxy_list)} ## 随机选择一个代理
+                    self.post(url=url,data=data,headers=headers,proxies=proxy,timeout=timeout) ## 发送含有代理的请求
+        else:
+            try:
+                self.content = requests.get(url=url,headers=headers,data=data,proxies=proxies,timeout=timeout).text
+            except:
+                if checkCount > 0:
+                    time.sleep(5)
+                    proxy = {"http":random.choice(self.proxy_list)} ## 随机选择一个代理
+                    print("正在更换代理。。。。")
+                    print("当前代理是：",proxy)
+                    self.post(url=url,data=data,headers=headers,proxies=proxy,timeout=timeout,checkCount=checkCount-1)
         
 
 download = FengProxy()
