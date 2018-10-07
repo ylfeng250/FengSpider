@@ -47,7 +47,7 @@ class FengProxy():
         timeout 超时时间
         尝试次数 默认 5次
         """
-        print("开始请求",url)
+        print("开始请求，请求方式为GET",url)
         if headers == None:
             headers={'User-Agent':self.ua.random}
         if proxies == None:
@@ -83,7 +83,7 @@ class FengProxy():
         timeout 超时时间
         尝试次数 默认 5次
         """
-        print("开始请求",url)
+        print("开始请求，请求方式为：POST",url)
         if headers == None:
             headers={'User-Agent':self.ua.random}
         if proxies == None:
