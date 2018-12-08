@@ -26,3 +26,4 @@
 * [优酷视频链接](./project/youku)
 * [华师大讲座报告爬虫](./project/华师大讲座会议)
 * [proxy-template 代理池](./project/proxy-template)
+* [斗鱼弹幕](./project/douyu)
