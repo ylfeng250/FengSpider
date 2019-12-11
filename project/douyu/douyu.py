@@ -21,7 +21,10 @@ class Douyu():
         # 房间号
         self.url = str(url)
         # ip
-        self.ip = "openbarrage.douyutv.com"
+        # self.ip = "openbarrage.douyutv.com"
+        # 2019-12-11 修改 服务器连接地址 上述域名应该不再使用
+        # 感谢 @梅子酒 提供最新的ip地址
+        self.ip = "119.96.201.28"
         # 端口号
         self.port = 8601
         self.get_info()
